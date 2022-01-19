@@ -21,6 +21,7 @@
                 <Grid Margin="0 0 0 20">
                     <Button Content="Сохранить" HorizontalAlignment="Left" Click="Button_Click"/>
                     <Button Content="Загрузить" HorizontalAlignment="Right" Click="Button_Click_1"/>
+
                 </Grid>
                 <StackPanel>
                     <Grid>
@@ -30,6 +31,9 @@
                             AcceptsReturn="True"
                             HorizontalAlignment="Left"
                             MinWidth="320"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                            materialDesign:HintAssist.Hint="Введите текст сюда"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
                             Height="100"/>
                         <TextBox x:Name="textbox2"
                             MaxWidth="320"
@@ -37,9 +41,27 @@
                             AcceptsReturn="True"
                             MinWidth="320"
                             Height="100"
+                            materialDesign:HintAssist.Hint="Вывод из файла"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                 IsReadOnly="True"
                             HorizontalAlignment="Right"/>
                     </Grid>
+
                 </StackPanel>
+                <Grid>
+                    <Button x:Name="btn3" Content="Расположение файла" Margin="0,10,522,10" Click="btn3_Click"/>
+                    <TextBox x:Name="textbox3"
+                            MaxWidth="450"
+                            TextWrapping = "Wrap"
+                            AcceptsReturn="True"
+                            MinWidth="450"
+                            materialDesign:HintAssist.Hint="Расположение файла"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                             IsReadOnly="True"
+                            HorizontalAlignment="Right" Margin="0,10,0,0"/>
+                </Grid>
             </StackPanel>
         </materialDesign:Card>
     </Grid>

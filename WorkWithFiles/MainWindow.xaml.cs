@@ -43,6 +43,12 @@ namespace WorkWithFiles
                 line = sr.ReadLine();
             }
         }
-        //
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            var name = System.IO.Path.GetFullPath("func.txt");
+            textbox3.Text = name;
+            textbox3.IsReadOnly = true;
+        }
     }
 }
