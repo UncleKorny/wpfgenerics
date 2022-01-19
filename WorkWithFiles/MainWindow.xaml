@@ -18,13 +18,14 @@
         <materialDesign:Card Padding="32" Margin="16">
             <StackPanel>
                 <TextBlock Text="Работа с файлами" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
-                <Grid Margin="0 0 0 20">
+                <Grid>
                     <Button Content="Сохранить" HorizontalAlignment="Left" Click="Button_Click"/>
                     <Button Content="Загрузить" HorizontalAlignment="Right" Click="Button_Click_1"/>
                 </Grid>
                 <StackPanel>
-                    <Grid>
+                    <Grid Margin="0,0,0,5">
                         <TextBox x:Name="textbox1"
+                            ScrollViewer.VerticalScrollBarVisibility="Auto"
                             MaxWidth="320"
                             TextWrapping = "Wrap"
                             AcceptsReturn="True"
@@ -44,6 +45,16 @@
                             materialDesign:TextFieldAssist.HasClearButton="True"
                             materialDesign:HintAssist.Hint="Вывод из файла" 
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </Grid>
+                    <Grid
+                          >
+                        <Button
+                            Content="Расположение файла"
+                            HorizontalAlignment="Left" Margin="0,15,0,0"/>
+                        <TextBox
+                            HorizontalAlignment="Right"
+                            Text="D:\KPYP_LECTION\KPYP_LECTION\WorkWithFiles\bin\Debug\func.txt" Margin="0,15,0,0"
+                            />
                     </Grid>
                 </StackPanel>
             </StackPanel>
