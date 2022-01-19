@@ -43,5 +43,6 @@ namespace WorkWithFiles
                 line = sr.ReadLine();
             }
         }
+        //
     }
 }
