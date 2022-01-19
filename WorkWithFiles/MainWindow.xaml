@@ -30,14 +30,20 @@
                             AcceptsReturn="True"
                             HorizontalAlignment="Left"
                             MinWidth="320"
-                            Height="100"/>
+                            Height="100"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                            materialDesign:HintAssist.Hint="Введите текст сюда" 
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         <TextBox x:Name="textbox2"
                             MaxWidth="320"
                             TextWrapping = "Wrap"
                             AcceptsReturn="True"
                             MinWidth="320"
                             Height="100"
-                            HorizontalAlignment="Right"/>
+                            HorizontalAlignment="Right"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                            materialDesign:HintAssist.Hint="Вывод из файла" 
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                     </Grid>
                 </StackPanel>
             </StackPanel>
