@@ -21,6 +21,7 @@
                 <Grid>
                     <Button Content="Сохранить" HorizontalAlignment="Left" Click="Button_Click"/>
                     <Button Content="Загрузить" HorizontalAlignment="Right" Click="Button_Click_1"/>
+
                 </Grid>
                 <StackPanel>
                     <Grid Margin="0,0,0,5">
@@ -31,32 +32,33 @@
                             AcceptsReturn="True"
                             HorizontalAlignment="Left"
                             MinWidth="320"
-                            Height="100"
                             materialDesign:TextFieldAssist.HasClearButton="True"
-                            materialDesign:HintAssist.Hint="Введите текст сюда" 
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            materialDesign:HintAssist.Hint="Введите текст сюда"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            Height="100"/>
                         <TextBox x:Name="textbox2"
                             MaxWidth="320"
                             TextWrapping = "Wrap"
                             AcceptsReturn="True"
                             MinWidth="320"
                             Height="100"
-                            HorizontalAlignment="Right"
-                            materialDesign:TextFieldAssist.HasClearButton="True"
-                            materialDesign:HintAssist.Hint="Вывод из файла" 
-                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                            HorizontalAlignment="Right"/>
                     </Grid>
-                    <Grid
-                          >
-                        <Button
-                            Content="Расположение файла"
-                            HorizontalAlignment="Left" Margin="0,15,0,0"/>
-                        <TextBox
-                            HorizontalAlignment="Right"
-                            Text="D:\KPYP_LECTION\KPYP_LECTION\WorkWithFiles\bin\Debug\func.txt" Margin="0,15,0,0"
-                            />
-                    </Grid>
+
                 </StackPanel>
+                <Grid>
+                    <Button x:Name="btn3" Content="Расположение файла" Margin="0,10,522,10" Click="btn3_Click"/>
+                    <TextBox x:Name="textbox3"
+                            MaxWidth="450"
+                            TextWrapping = "Wrap"
+                            AcceptsReturn="True"
+                            MinWidth="450"
+                            materialDesign:HintAssist.Hint="Расположение файла"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                             IsReadOnly="True"
+                            HorizontalAlignment="Right" Margin="0,10,0,0"/>
+                </Grid>
             </StackPanel>
         </materialDesign:Card>
     </Grid>
