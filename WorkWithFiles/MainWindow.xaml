@@ -34,7 +34,6 @@
                             MinWidth="320"
                             materialDesign:TextFieldAssist.HasClearButton="True"
                             materialDesign:HintAssist.Hint="Введите текст сюда"
-                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
                             Height="100"/>
                         <TextBox x:Name="textbox2"
                             MaxWidth="320"
