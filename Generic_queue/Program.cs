@@ -12,13 +12,13 @@ namespace Generic_queue
         {
             Queue<int> numbers = new Queue<int>();
 
-            numbers.Enqueue(3); // очередь 3
-            numbers.Enqueue(5); // очередь 3, 5
-            numbers.Enqueue(8); // очередь 3, 5, 8
+            //numbers.Enqueue(3); // очередь 3
+            //numbers.Enqueue(5); // очередь 3, 5
+            //numbers.Enqueue(8); // очередь 3, 5, 8
 
-            // получаем первый элемент очереди
-            int queueElement = numbers.Dequeue(); //теперь очередь 5, 8
-            Console.WriteLine(queueElement);
+            //// получаем первый элемент очереди
+            //int queueElement = numbers.Dequeue(); //теперь очередь 5, 8
+            //Console.WriteLine(queueElement);
 
             Queue<Person> persons = new Queue<Person>();
             persons.Enqueue(new Person() { Name = "Tom" });

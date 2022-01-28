@@ -5,7 +5,7 @@ namespace Collections_List
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             List<int> numbers = new List<int>() { 1, 2, 3, 45 };
             numbers.Add(6); // добавление элемента
@@ -21,20 +21,19 @@ namespace Collections_List
                 Console.WriteLine(i);
             }
 
-            List<Person> people = new List<Person>(3);
+            List<Person> people = new List<Person>();
             people.Add(new Person() { Name = "Том" });
             people.Add(new Person() { Name = "Билл" });
-
             foreach (Person p in people)
             {
                 Console.WriteLine(p.Name);
             }
-
+            
             Console.ReadLine();
         }
     }
     class Person
     {
-        public string Name { get; set; }
+        public string Name { get; set; }//Свойство
     }
 }

@@ -18,6 +18,7 @@ namespace Collections
             }
             // удаляем первый элемент
             list.RemoveAt(0);
+
             // переворачиваем список
             list.Reverse();
             // получение элемента по индексу
