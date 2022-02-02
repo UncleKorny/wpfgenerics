@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-
+using System.Collections;
 namespace Generics_wpf
 {
     /// <summary>
@@ -13,5 +13,6 @@ namespace Generics_wpf
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }

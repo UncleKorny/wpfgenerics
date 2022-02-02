@@ -1,4 +1,4 @@
-﻿<Window x:Class="Generics_wpf.MainWindow"
+﻿<Window x:Name="mainform" x:Class="Generics_wpf.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
@@ -6,19 +6,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Generics_wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="643.2">
+        Title="MainWindow" Height="450" Width="643.2" Loaded="mainform_Loaded">
     <Grid>
         <Grid>
-            <syncfusion:UpDown Name="upDown" Width="100" Height="23" Margin="106,38,430.8,359"/>
-            <syncfusion:UpDown Name="upDown2" Width="100" Height="23" Margin="106,78,430.8,319"/>
+            <syncfusion:UpDown x:Name="XnumericUpDown" Margin="106,38,424,355"/>
+            <syncfusion:UpDown x:Name="YnumericUpDown" Margin="106,78,424,312"/>
         </Grid>
 
         <Label x:Name="label" Content="x =" HorizontalAlignment="Left" Margin="37,37,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy" Content="y =" HorizontalAlignment="Left" Margin="37,80,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Добавить" HorizontalAlignment="Left" Margin="248,86,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button" Content="Добавить" HorizontalAlignment="Left" Margin="248,86,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <Button x:Name="button1" Content="Решить задачу" HorizontalAlignment="Left" Margin="377,86,0,0" VerticalAlignment="Top" Width="98"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="125" Margin="77,167,0,0" VerticalAlignment="Top" Width="211"/>
-        <DataGrid x:Name="dataGrid_Copy" HorizontalAlignment="Left" Height="125" Margin="387,167,0,0" VerticalAlignment="Top" Width="211"/>
+        <DataGrid x:Name="dataGridView1" HorizontalAlignment="Left" Height="125" Margin="77,167,0,0" VerticalAlignment="Top" Width="211" MinColumnWidth="50">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="x"/>
+                <DataGridTextColumn Header="y"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="dataGridView2" HorizontalAlignment="Left" Height="125" Margin="387,167,0,0" VerticalAlignment="Top" Width="211" MinColumnWidth="50">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="x"/>
+                <DataGridTextColumn Header="y"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Button x:Name="button2" Content="Удалить выбранную точку" HorizontalAlignment="Left" Height="23" Margin="77,317,0,0" VerticalAlignment="Top" Width="211"/>
         <Button x:Name="button3" Content="Отсортировать" HorizontalAlignment="Left" Height="28" Margin="387,317,0,0" VerticalAlignment="Top" Width="211"/>
         <Button x:Name="button4" Content="Закрыть" HorizontalAlignment="Left" Height="23" Margin="478,387,0,0" VerticalAlignment="Top" Width="120"/>

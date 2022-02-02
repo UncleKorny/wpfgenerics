@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
 
 namespace Generics_wpf
 {
@@ -23,6 +24,21 @@ namespace Generics_wpf
         public MainWindow()
         {
             InitializeComponent();
+            ArrayList points, res;
+            points = new ArrayList();
+            res = new ArrayList();
+
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            float x = (float)XnumericUpDown.Value;
+            float y = (float)YnumericUpDown.Value;
+            Point p = new Point(x, y);
+            points.Add(p);
+            dataGridView1.Rows.Add(p.x, p.y);
+        }
+
+
     }
 }
