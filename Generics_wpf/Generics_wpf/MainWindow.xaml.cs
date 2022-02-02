@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
+using System.Collections.ObjectModel;
 
 namespace Generics_wpf
 {
@@ -24,35 +25,35 @@ namespace Generics_wpf
         public MainWindow()
         {
             InitializeComponent();
+            dataGridView1.ItemsSource = result;
         }
+        ObservableCollection<DataItem> result = new ObservableCollection<DataItem>();
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             float x = (float)XnumericUpDown.Value;
             float y = (float)YnumericUpDown.Value;
-            List<DataItem> result = new List<DataItem>();
             result.Add(new DataItem(x,y));
-            dataGridView1.Items.Add(result);
-            //MessageBox.Show(result.ToString());
-            int sum = 0;
             
         }
 
         private void mainform_Loaded(object sender, RoutedEventArgs e)
         {
-
         }
 
-       
+        private void dataGridView1_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+        {
+
+        }
     }
 }
 public class DataItem
 {
     public DataItem(float col1, float col2)
     {
-        Column1 = col1;
-        Column2 = col2;
+        x = col1;
+        y = col2;
     }
-    public float Column1 { get; set; }
-    public float Column2 { get; set; }
+    public float x { get; set; }
+    public float y { get; set; }
 }
