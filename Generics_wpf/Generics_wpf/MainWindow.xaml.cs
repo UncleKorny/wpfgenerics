@@ -24,21 +24,35 @@ namespace Generics_wpf
         public MainWindow()
         {
             InitializeComponent();
-            ArrayList points, res;
-            points = new ArrayList();
-            res = new ArrayList();
-
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             float x = (float)XnumericUpDown.Value;
             float y = (float)YnumericUpDown.Value;
-            Point p = new Point(x, y);
-            points.Add(p);
-            dataGridView1.Rows.Add(p.x, p.y);
+            List<DataItem> result = new List<DataItem>();
+            result.Add(new DataItem(x,y));
+            dataGridView1.Items.Add(r);
+            //MessageBox.Show(result.ToString());
+            int sum = 0;
+            
         }
 
+        private void mainform_Loaded(object sender, RoutedEventArgs e)
+        {
 
+        }
+
+       
     }
+}
+public class DataItem
+{
+    public DataItem(float col1, float col2)
+    {
+        Column1 = col1;
+        Column2 = col2;
+    }
+    public float Column1 { get; set; }
+    public float Column2 { get; set; }
 }
