@@ -32,7 +32,7 @@ namespace Generics_wpf
             float y = (float)YnumericUpDown.Value;
             List<DataItem> result = new List<DataItem>();
             result.Add(new DataItem(x,y));
-            dataGridView1.Items.Add(r);
+            dataGridView1.Items.Add(result);
             //MessageBox.Show(result.ToString());
             int sum = 0;
             

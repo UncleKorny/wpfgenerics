@@ -13,6 +13,10 @@ namespace Generics_wpf
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTc1ODgyQDMxMzkyZTM0MmUzMERTcm1FaW0xNGliS0gxMnJiTlltK1d6REFDUkdKZjg1Vld2VE5HellBb3c9");
+        }
         
     }
 }
