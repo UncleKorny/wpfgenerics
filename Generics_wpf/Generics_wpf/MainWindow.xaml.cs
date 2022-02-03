@@ -83,14 +83,18 @@ namespace Generics_wpf
 
         private void sortbtn_Click(object sender, RoutedEventArgs e)
         {
-            int temp;
-            foreach(DataItem dt in result)
-            {
-                for(int j = 1; j < result.Count; j++)
-                {
-                    
-                }
-            }
+            List<DataItem> items = new List<DataItem>();
+            items = result2.ToList();
+            items.Sort();
+            dataGridView2.ItemsSource = items;
+            /* int temp;
+             foreach(DataItem dt in result)
+             {
+                 for(int j = 1; j < result.Count; j++)
+                 {
+
+                 }
+             }*/
             //for(int i = 0; i < result2.Count; i++)
             //{
             //    for(int j = i + 1; j < result2.Count; j++)
@@ -101,7 +105,7 @@ namespace Generics_wpf
         }
     }
 }
-public class DataItem
+public class DataItem:IComparable
 {
     public DataItem(float col1, float col2)
     {
@@ -110,4 +114,13 @@ public class DataItem
     }
     public float x { get; set; }
     public float y { get; set; }
+    public int CompareTo(object obj)
+    {
+        DataItem p = (DataItem)obj;
+        if (x > p.x)
+            return 1;
+        if (x == p.x)
+            return 0;
+        return -1;
+    }
 }
