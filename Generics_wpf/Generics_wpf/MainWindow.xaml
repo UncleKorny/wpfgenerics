@@ -24,7 +24,7 @@
                 <DataGridTextColumn Header="y"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="deletebtn" Content="Удалить выбранную точку" HorizontalAlignment="Left" Height="23" Margin="77,317,0,0" VerticalAlignment="Top" Width="211"/>
+        <Button x:Name="deletebtn" Content="Удалить выбранную точку" HorizontalAlignment="Left" Height="23" Margin="77,317,0,0" VerticalAlignment="Top" Width="211" Click="deletebtn_Click"/>
         <Button x:Name="sortbtn" Content="Отсортировать" HorizontalAlignment="Left" Height="28" Margin="387,317,0,0" VerticalAlignment="Top" Width="211"/>
         <Button x:Name="closebtn" Content="Закрыть" HorizontalAlignment="Left" Height="23" Margin="478,387,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label1" Content="Исходный список" HorizontalAlignment="Left" Margin="77,134,0,0" VerticalAlignment="Top"/>

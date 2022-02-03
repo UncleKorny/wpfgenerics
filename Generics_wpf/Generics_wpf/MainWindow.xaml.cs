@@ -45,6 +45,20 @@ namespace Generics_wpf
         {
 
         }
+
+        private void deletebtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var num = dataGridView1.SelectedIndex;
+                result.RemoveAt(num);
+                dataGridView1.ItemsSource = result;
+            }
+            catch
+            {
+                MessageBox.Show("Выберите точку!");
+            }
+        }
     }
 }
 public class DataItem
