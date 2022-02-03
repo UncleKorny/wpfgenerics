@@ -16,17 +16,12 @@
         <Label x:Name="x" Content="x =" HorizontalAlignment="Left" Margin="37,37,0,0" VerticalAlignment="Top"/>
         <Label x:Name="y" Content="y =" HorizontalAlignment="Left" Margin="37,80,0,0" VerticalAlignment="Top"/>
         <Button x:Name="addbtn" Content="Добавить" HorizontalAlignment="Left" Margin="248,86,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="solvebtn" Content="Решить задачу" HorizontalAlignment="Left" Margin="377,86,0,0" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="solvebtn" Content="Решить задачу" HorizontalAlignment="Left" Margin="377,86,0,0" VerticalAlignment="Top" Width="98" Click="solvebtn_Click"/>
         <DataGrid x:Name="dataGridView1" HorizontalAlignment="Left" Height="125" Margin="77,167,0,0" VerticalAlignment="Top" Width="211" MinColumnWidth="50" RowEditEnding="dataGridView1_RowEditEnding"/>
-        <DataGrid x:Name="dataGridView2" HorizontalAlignment="Left" Height="125" Margin="387,167,0,0" VerticalAlignment="Top" Width="211" MinColumnWidth="50">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="x"/>
-                <DataGridTextColumn Header="y"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <DataGrid x:Name="dataGridView2" HorizontalAlignment="Left" Height="125" Margin="387,167,0,0" VerticalAlignment="Top" Width="211" MinColumnWidth="50"/>
         <Button x:Name="deletebtn" Content="Удалить выбранную точку" HorizontalAlignment="Left" Height="23" Margin="77,317,0,0" VerticalAlignment="Top" Width="211" Click="deletebtn_Click"/>
-        <Button x:Name="sortbtn" Content="Отсортировать" HorizontalAlignment="Left" Height="28" Margin="387,317,0,0" VerticalAlignment="Top" Width="211"/>
-        <Button x:Name="closebtn" Content="Закрыть" HorizontalAlignment="Left" Height="23" Margin="478,387,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="sortbtn" Content="Отсортировать" HorizontalAlignment="Left" Height="28" Margin="387,317,0,0" VerticalAlignment="Top" Width="211" Click="sortbtn_Click"/>
+        <Button x:Name="closebtn" Content="Закрыть" HorizontalAlignment="Left" Height="23" Margin="478,387,0,0" VerticalAlignment="Top" Width="120" Click="closebtn_Click"/>
         <Label x:Name="label1" Content="Исходный список" HorizontalAlignment="Left" Margin="77,134,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Результат" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="4.464,2.211" Margin="387,136,0,0"/>
     </Grid>
